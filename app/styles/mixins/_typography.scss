@@ -22,9 +22,10 @@
 // -------------------------------------
 
 @mixin font-family($family: "default") {
-  @if $family == "italic" {
-    font-family: 'PT Sans';
-    font-weight: '400italic';
+  
+  @if $family == "header" {
+    font-family: 'museo-sans';
+    font-weight: '700';
   }  
   @if $family == "kepler" {
     font-family: "kepler-std",serif;

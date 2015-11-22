@@ -1,33 +1,17 @@
 // Main Application
 
-var namespace = namespace || {};
+var ns = ns || {};
 
-(function($, window, document, undefined) {
+(function(window, document, undefined) {
 
     'use strict';
 
     /**
-     * MyApp constructor
+     * myApp
      */
-    namespace.MyApp = function(options){
+    ns.myApp = function(){
 
-        // Default Settings
-        this.settings = {
-            something: 'something'
-        };
-
-        $.extend(this.settings, options);
-
-        this._init();
+ 
     };
 
-    namespace.MyApp.prototype._init = function() {
-        console.log('initialising!');
-
-        // Attach modules
-        namespace.MyApp.prototype.moduleA = new namespace.ModuleA();
-        namespace.MyApp.prototype.moduleB = new namespace.ModuleB();
-
-    };
-
-})(jQuery, window, document);
+})(window, document);

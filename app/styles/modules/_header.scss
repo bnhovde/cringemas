@@ -1,0 +1,57 @@
+// *************************************
+//
+//   header
+//   -> Header section
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.header {
+
+    // -------------------------------------
+    //   Variables & Base
+    // -------------------------------------
+
+    margin: 10vh 0 0 0;
+
+    // -------------------------------------
+    //   Elements
+    // -------------------------------------
+
+
+    // ----- Element description ----- // 
+
+    &__title {
+        
+        margin-top: 4rem;
+        
+        > span {
+            @include font-family("kepler");
+            display: block;
+            font-size: 1.8rem;
+            line-height: 1.5rem;
+            text-transform: initial;
+        }
+    }
+
+    // ----- Element description ----- // 
+
+    &__sub {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+
+    // -------------------------------------
+    //   Variations
+    // -------------------------------------
+
+
+    // ----- Variation description ----- // 
+
+    &--variation {}
+
+}

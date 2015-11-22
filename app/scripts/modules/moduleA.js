@@ -1,11 +1,11 @@
 // Module A (example)
 
-var namespace = namespace || {};
+var ns = ns || {};
 
-(function($, window, document, undefined) {
+(function(window, document, undefined) {
 
     'use strict';
 
-    namespace.ModuleA = function() {};
+    ns.ModuleA = function() {};
 
-})(jQuery, window, document);
+})(window, document);

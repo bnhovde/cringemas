@@ -1,13 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="wf-loading" lang="">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>cringemas</title>
-    
-    <script src="https://use.typekit.net/cdh7rdd.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -18,26 +15,38 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
   </head>
   <body>
 
-    <header>
-        <h1>Hola!</h1>
+    <header class="header">
+        <div class="container">
+            <a href="#">#cringemas</a>
+            <h1 class="header__title"><span>It's a...</span>Cringemas Cracker</h1>
+            <h2 class="header__sub">Preparing the nation with the worst christmas cracker jokes you can expect</h2>
+            <a href="#">Go ahead, click on the cracker...</a>
+        </div>
     </header>
-
+    
     <main>
-        <section>
-            <h2>Lorem Sandwich!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus sit, quod est ea rem distinctio itaque aut dolores nisi sunt, aspernatur, fugiat autem iure dicta. Eligendi numquam voluptate cum vero.</p>
-        </section>
+        <div class="cracker" id="cracker">
+            <div class="cracker__right"></div>
+            <div class="cracker__left"></div>
+        </div>
     </main>
+    
+    <footer>
+        <a href="#">Previous Crackers</a>
+        <p class="sub">Have a great Christmas from all of us at...</p>
+        <a href="#"><img src="/images/logo.png" alt="cdd logo"></a>
+    </footer>
 
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    
+    <!-- Typekit -->
+    <script src="https://use.typekit.net/cdh7rdd.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
     <!-- Google Analytics -->
     <script>
@@ -51,7 +60,6 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
