@@ -16,15 +16,15 @@
     // -------------------------------------
 
 
-    // Only show page after fonts have loaded
-    visibility: visible; 
-    opacity: 1;
-    transition: opacity .5s ease-in-out;
+    // // Only show page after fonts have loaded
+    // visibility: visible; 
+    // opacity: 1;
+    // transition: opacity .5s ease-in-out;
     
-    .wf-loading & {
-        visibility: hidden; 
-        opacity: 0;
-    }
+    // .wf-loading & {
+    //     visibility: hidden; 
+    //     opacity: 0;
+    // }
 
 
     // -------------------------------------

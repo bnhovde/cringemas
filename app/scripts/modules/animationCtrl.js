@@ -22,7 +22,7 @@ var Velocity = Velocity || {};
         
         var settings = {
             crackerFired: false
-        }
+        };
 
 
         /**
@@ -33,10 +33,20 @@ var Velocity = Velocity || {};
             
             // Initialise animation controller
             DOM.body.setAttribute('ui-animation-ctrl', 'is-started');
+
+        };
+
+
+        /**
+        * @name _attachEventListeners
+        * @desc Attach listeners AFTER the initial animation
+        */ 
+        var _attachEventListeners = function () {
             
             DOM.cracker.addEventListener('mouseover', _crackerHoverOn, false);
             DOM.cracker.addEventListener('mouseout', _crackerHoverOff, false);
             DOM.cracker.addEventListener('click', _fireCracker, false);
+
         };
 
 
@@ -47,16 +57,23 @@ var Velocity = Velocity || {};
         var showCracker = function () {
             
 			Velocity(DOM.cracker, { translateZ: '-1000px' }, 0);
-			Velocity(DOM.cracker, { translateZ: '0px' }, 1000, [1.7, 1.15]);
+			Velocity(DOM.cracker, { translateZ: '0px' }, 1000, [1.5, 1.15]);
             
 			Velocity(DOM.diamond, { 
-                scale: 3,
-                rotateZ: '-145deg'
-            }, 0);
+                scale: 0,
+                rotateZ: '45deg'
+            }, 200);
+			Velocity(DOM.diamond, { 
+                scale: 1.2,
+                rotateZ: '45deg'
+            }, {
+                duration: 200,
+                complete: function() { _attachEventListeners(); } // Enable hovers
+            });
 			Velocity(DOM.diamond, { 
                 scale: 1,
                 rotateZ: '45deg'
-            }, 1500, [2, 1.15]);
+            }, 1000, [2, 1.15]);
         };
 
 
@@ -74,7 +91,7 @@ var Velocity = Velocity || {};
             
 			Velocity(
                 DOM.cracker, { 
-                    translateZ: '200px',
+                    translateZ: '100px',
                     rotateZ: '3deg'
                 }, 500, [1.7, 1.15]
             );
