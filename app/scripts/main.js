@@ -1,12 +1,26 @@
-// Script loader
-
 var ns = ns || {};
 
 (function(window, document, undefined) {
 
     'use strict';
-  
-    // Initialise app 
 
-  
+    /**
+    * Global Constants
+    */
+	
+	// Get todays date
+	let d = new Date();
+	let day = d.getDate();
+	
+	// Temp setting
+	day = 1;
+    
+    ns.CONST = {
+		today : day
+	}
+	
+	// Fire off modules
+	ns.videoCtrl.init();
+	
 })(window, document);
+
