@@ -1961,14 +1961,7 @@ a {
   margin: 5vh auto 10vh auto;
   width: 547px;
   height: 130px;
-  -webkit-animation: jelly 1000ms linear both;
-          animation: jelly 1000ms linear both;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-}
-.wf-loading .cracker {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  cursor: pointer;
 }
 .cracker__left {
   position: absolute;
@@ -1990,12 +1983,6 @@ a {
   position: absolute;
   top: 40px;
   left: 44%;
-  -webkit-animation: jelly 1000ms linear both;
-          animation: jelly 1000ms linear both;
-}
-.wf-loading .cracker__date {
-  -webkit-animation: none;
-          animation: none;
 }
 
 /* Generated with Bounce.js. Edit at http://goo.gl/tR9hes */
@@ -2217,14 +2204,6 @@ a {
   background-color: white;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-animation: appear 200ms linear .2s both;
-          animation: appear 200ms linear .2s both;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-}
-.wf-loading .diamond {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
 }
 .diamond__inner {
   font-family: 'museo-sans';
@@ -2242,31 +2221,6 @@ a {
           transform: rotate(-45deg);
 }
 
-@-webkit-keyframes appear {
-  0% {
-    -webkit-transform: scale(0) rotate(45deg);
-            transform: scale(0) rotate(45deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: scale(1) rotate(45deg);
-            transform: scale(1) rotate(45deg);
-    opacity: 1;
-  }
-}
-
-@keyframes appear {
-  0% {
-    -webkit-transform: scale(0) rotate(45deg);
-            transform: scale(0) rotate(45deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: scale(1) rotate(45deg);
-            transform: scale(1) rotate(45deg);
-    opacity: 1;
-  }
-}
 .header {
   margin: 10vh 0 0 0;
 }
@@ -2295,9 +2249,14 @@ a {
 .page {
   visibility: visible;
   opacity: 1;
-  transition: opacity 1s ease-in-out;
+  transition: opacity .5s ease-in-out;
 }
 .wf-loading .page {
   visibility: hidden;
   opacity: 0;
+}
+
+.perspective {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }

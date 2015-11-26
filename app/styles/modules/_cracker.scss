@@ -19,15 +19,15 @@
     margin: 5vh auto 10vh auto;
     width: 547px;
     height: 130px;
+    cursor: pointer;
     
-    animation: jelly 1000ms linear both;
-               
-    animation-play-state: running;
+    // animation: jelly 1000ms linear both;
+    // animation-play-state: running;
     
-    // Hide until webfonts have loaded
-    .wf-loading & {
-        animation-play-state: paused;
-    }
+    // // Hide until webfonts have loaded
+    // .wf-loading & {
+    //     animation-play-state: paused;
+    // }
     
     // -------------------------------------
     //   Elements
@@ -65,9 +65,6 @@
         top: 40px;
         left: 44%;
         
-        animation: jelly 1000ms linear both;
-        
-        .wf-loading & { animation: none; }
     }
 
 

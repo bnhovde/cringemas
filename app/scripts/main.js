@@ -21,6 +21,7 @@ var ns = ns || {};
 	
 	// Fire off modules
 	ns.videoCtrl.init();
+	ns.animationCtrl.init();
 	
 })(window, document);
 

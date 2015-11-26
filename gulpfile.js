@@ -178,7 +178,7 @@ gulp.task('watch', ['connect'], function() {
 
     gulp.watch('app/styles/**/*.scss', ['pixrem']);
      
-    gulp.watch('app/scripts/**/*.js', ['babel']);
+    gulp.watch(['app/scripts/**/*.js', '!app/scripts/compiled/**/*.js'], ['babel']);
      
     gulp.watch('bower.json', ['wiredep']);
 });

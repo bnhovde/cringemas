@@ -27,12 +27,12 @@
         </div>
     </header>
     
-    <main>
+    <main class="perspective">
         <div class="cracker" id="cracker">
-            <div class="cracker__right"></div>
-            <div class="cracker__left"></div>
+            <div class="cracker__right" id="cracker-right"></div>
+            <div class="cracker__left" id="cracker-left"></div>
             <div class="cracker__date">
-                <div class="diamond">
+                <div class="diamond" id="diamond">
                     <span class="diamond__inner">12</span>
                 </div>
             </div>
@@ -45,22 +45,18 @@
         <a href="#"><img src="/images/logo.png" alt="cdd logo"></a>
     </footer>
 
-    <!--[if lt IE 10]>
+    <!--[if lt IE 9]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
-    <!-- Typekit -->
-    <script src="https://use.typekit.net/cdh7rdd.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
     <!-- Google Analytics -->
     <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
     <!-- build:js scripts/vendor.js -->
@@ -68,9 +64,32 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/compiled/modules/videoCtrl.js"></script>
-        <script src="scripts/compiled/main.js"></script>
-        <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/compiled/modules/velocity.min.js"></script>
+    <script src="scripts/compiled/modules/videoCtrl.js"></script>
+    <script src="scripts/compiled/modules/animationCtrl.js"></script>
+    <script src="scripts/compiled/main.js"></script>
+    <!-- endbuild -->
+    
+    <!-- Typekit -->
+    <script>
+        
+        // Global namespace
+        var ns = ns || {};
+        
+        WebFontConfig = {
+            typekit: { id: 'cdh7rdd' },
+            active: function() {
+                // Fonts loaded, fire off the cracker!
+                ns.animationCtrl.showCracker();
+            }
+        };
+        
+        (function(d) {
+            var wf = d.createElement('script'), s = d.scripts[0];
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+            s.parentNode.insertBefore(wf, s);
+        })(document);
+    </script>
 </body>
 </html>

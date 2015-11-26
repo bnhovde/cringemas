@@ -19,15 +19,7 @@
     height: 60px;
     background-color: white;
     transform: rotate(45deg);
-    
-    animation: appear 200ms linear .2s both;       
-    animation-play-state: running;
-   
-    
-    // Hide until webfonts have loaded
-    .wf-loading & {
-        animation-play-state: paused;
-    }
+
 
     // -------------------------------------
     //   Elements
@@ -59,9 +51,4 @@
 
     &--variation {}
 
-}
-
-@keyframes appear { 
-  0% { transform: scale(0) rotate(45deg); opacity: 0; }
-  100% { transform: scale(1) rotate(45deg); opacity: 1; } 
 }
