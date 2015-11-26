@@ -28,16 +28,6 @@ body {
     padding: 0;
     text-align: center;
     color: $g-sitecol-gray;
-
-    // Only show page after fonts have loaded
-    visibility: visible; 
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
-    
-    .wf-loading & {
-        visibility: hidden; 
-        opacity: 0;
-    }
 }
 
 ul, li {
