@@ -1948,6 +1948,12 @@ a {
   color: #D01D3A;
 }
 
+.icon {
+  display: inline-block;
+  color: #444444;
+  fill: currentColor;
+}
+
 .container {
   max-width: 550px;
   margin: 0 auto;
@@ -1958,7 +1964,7 @@ a {
 
 .cracker {
   position: relative;
-  margin: 5vh auto 10vh auto;
+  margin: 5vh auto;
   width: 547px;
   height: 130px;
   cursor: pointer;
@@ -2016,6 +2022,21 @@ a {
           transform: rotate(-45deg);
 }
 
+.embed {
+  position: relative;
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+.embed__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .footer {
   visibility: visible;
   opacity: 1;
@@ -2071,4 +2092,17 @@ a {
 .perspective {
   -webkit-perspective: 1000px;
           perspective: 1000px;
+}
+
+.social {
+  text-align: center;
+}
+.social__icon {
+  display: inline-block;
+}
+.social__icon svg {
+  width: 30px;
+  height: 30px;
+  margin: 0 15px;
+  color: #D01D3A;
 }

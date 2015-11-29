@@ -13,14 +13,14 @@ var ns = ns || {};
         // App config and variables
         var DOM = {
             body            : document.querySelectorAll('body')[0],
-            navToggle 		: document.querySelectorAll('[ui-nav-toggle]')[0],
-            navContainer 	: document.querySelectorAll('[ui-nav-container]')[0]
+            videoPlayBtn 	: document.getElementById('cracker'),
+            vimeoEmbed 	    : document.getElementById('vimeo-container')
         };
         
         var settings = {
             data : [],
             date : 0
-        }
+        };
         
         var s = settings;
 
@@ -35,9 +35,12 @@ var ns = ns || {};
             DOM.body.setAttribute('ui-video-ctrl', 'is-started');
             
             // Get todays date
-            s.date = ns.CONST.today;
+            s.date = ns.CONST.DAY;
             
-            // DOM.navToggle.addEventListener('click', _toggleMenu, false);
+            // Event listeners
+            DOM.videoPlayBtn.addEventListener('click', _playVideo, false);
+            
+            // Setup video embed from google spreadsheet
             _getVideoPath();
         };
 
@@ -77,9 +80,32 @@ var ns = ns || {};
         */   
         var _createEmbed = function () {
             
-            let vimeoURL = s.data[s.date].gsx$embedpath.$t;
+            let vimeoID;
             
-            console.log(vimeoURL);
+            // Check if date exists in data source
+            if (s.data[s.date - 1] !== undefined) {
+                vimeoID = s.data[s.date - 1].gsx$id.$t;
+            }
+            
+            // If we're testing (or embed ID is empty), use the demo embed instead
+            if (ns.CONST.TEST || vimeoID === '') { vimeoID = 146790300; }
+            
+            DOM.vimeoEmbed.innerHTML = '<iframe id="vimeo-embed" src=https://player.vimeo.com/video/' + vimeoID + '?api=1  class="embed__inner" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
+            
+        };
+
+
+        /**
+        * @name showVideo
+        * @desc Shows the video and begins playback
+        */   
+        var _playVideo = function () {
+            
+            let iframe = document.getElementById('vimeo-embed');
+            
+            // Prepare data for Vimeo API
+            var player = $f(iframe);
+            player.api('play');
         };
         
         //////////////////

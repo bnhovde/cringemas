@@ -19,7 +19,8 @@ var Velocity = Velocity || {};
             cracker: document.getElementById('cracker'),
             crackerLeft: document.getElementById('cracker-left'),
             crackerRight: document.getElementById('cracker-right'),
-            diamond: document.getElementById('diamond')
+            diamond: document.getElementById('diamond'),
+            diamondDate: document.getElementById('diamond-date')
         };
 
         var settings = {
@@ -34,6 +35,22 @@ var Velocity = Velocity || {};
 
             // Initialise animation controller
             DOM.body.setAttribute('ui-animation-ctrl', 'is-started');
+
+            // Set correct date on cracker
+            DOM.diamondDate.innerHTML = ns.CONST.DAY;
+        };
+
+        /**
+        * @name introComplete
+        * @desc Intro animation has completed
+        */
+        var _introComplete = function _introComplete() {
+
+            // Now initialise video controller (prevents jank on page load)
+            ns.videoCtrl.init();
+
+            // Set correct date on cracker
+            _attachEventListeners(); // Enable hovers
         };
 
         /**
@@ -66,8 +83,8 @@ var Velocity = Velocity || {};
             }, {
                 duration: 200,
                 complete: function complete() {
-                    _attachEventListeners();
-                } // Enable hovers
+                    _introComplete();
+                }
             });
             Velocity(DOM.diamond, {
                 scale: 1,
