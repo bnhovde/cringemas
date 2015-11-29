@@ -15,12 +15,22 @@
     //   Base
     // -------------------------------------
 
-    position: relative;
-    max-width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-    overflow: hidden;
-
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.76);
+    z-index: 300;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s cubic-bezier(0, 0, 0.24, 0.85);
+    
     // -------------------------------------
     //   Elements
     // -------------------------------------
@@ -29,11 +39,40 @@
     // ----- Element description ----- // 
 
     &__inner {
-        position: absolute; 
-        top: 0; 
-        left: 0; 
-        width: 100%; 
-        height: 100%;
+        position: relative;
+        width: 90%;
+        max-height: 60vh;
+        padding-bottom: 51.05%;
+        
+        iframe {
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%;
+        }
+    }
+
+
+    // ----- Element description ----- // 
+
+    &__close {
+        display: block;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+        margin-left: -20px;
+        background-color: $g-sitecol-red;
+        border-radius: 50%;
+        z-index: 1;
+        
+        svg {
+            color: white;
+            width: 20px;
+            height: 40px;
+        }
     }
 
 
@@ -44,6 +83,9 @@
 
     // ----- Variation description ----- // 
 
-    &--variation {}
+    [ui-video="is-playing"] & {
+        opacity: 1;
+        visibility: visible;
+    }
 
 }

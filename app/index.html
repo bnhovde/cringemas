@@ -28,6 +28,10 @@
                 <title>facebook2</title>
                 <path class="path1" d="M853.35 0h-682.702c-94.25 0-170.648 76.42-170.648 170.686v682.63c0 94.266 76.398 170.684 170.648 170.684h341.352v-448h-128v-128h128v-96c0-88.366 71.634-160 160-160h160v128h-160c-17.674 0-32 14.328-32 32v96h176l-32 128h-144v448h213.35c94.25 0 170.65-76.418 170.65-170.684v-682.63c0-94.266-76.4-170.686-170.65-170.686z"></path>
             </symbol>
+            <symbol id="icon-cross" viewBox="0 0 1024 1024">
+                <title>cross</title>
+                <path class="path1" d="M1014.662 822.66c-0.004-0.004-0.008-0.008-0.012-0.010l-310.644-310.65 310.644-310.65c0.004-0.004 0.008-0.006 0.012-0.010 3.344-3.346 5.762-7.254 7.312-11.416 4.246-11.376 1.824-24.682-7.324-33.83l-146.746-146.746c-9.148-9.146-22.45-11.566-33.828-7.32-4.16 1.55-8.070 3.968-11.418 7.31 0 0.004-0.004 0.006-0.008 0.010l-310.648 310.652-310.648-310.65c-0.004-0.004-0.006-0.006-0.010-0.010-3.346-3.342-7.254-5.76-11.414-7.31-11.38-4.248-24.682-1.826-33.83 7.32l-146.748 146.748c-9.148 9.148-11.568 22.452-7.322 33.828 1.552 4.16 3.97 8.072 7.312 11.416 0.004 0.002 0.006 0.006 0.010 0.010l310.65 310.648-310.65 310.652c-0.002 0.004-0.006 0.006-0.008 0.010-3.342 3.346-5.76 7.254-7.314 11.414-4.248 11.376-1.826 24.682 7.322 33.83l146.748 146.746c9.15 9.148 22.452 11.568 33.83 7.322 4.16-1.552 8.070-3.97 11.416-7.312 0.002-0.004 0.006-0.006 0.010-0.010l310.648-310.65 310.648 310.65c0.004 0.002 0.008 0.006 0.012 0.008 3.348 3.344 7.254 5.762 11.414 7.314 11.378 4.246 24.684 1.826 33.828-7.322l146.746-146.748c9.148-9.148 11.57-22.454 7.324-33.83-1.552-4.16-3.97-8.068-7.314-11.414z"></path>
+            </symbol>
         </svg>
         
         <header class="header">
@@ -35,7 +39,9 @@
                 <a href="#">#cringemas</a>
                 <h1 class="header__title"><span>It's a...</span>Cringemas Cracker</h1>
                 <h2 class="header__sub">Preparing the nation with the worst christmas cracker jokes you can expect</h2>
-                <a href="#">Go ahead, click on the cracker...</a>
+                <div class="header__action">
+                    <p class="t t--action">Go ahead, click on the cracker...</p>
+                </div>
             </div>
         </header>
         
@@ -57,11 +63,24 @@
                 <li class="social__icon"><a href="http://www.facebook.com/share.php?u=[URL]&title=[TITLE]" id="social-twitter"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a></li>
             </ul>
             <a href="#">Previous Crackers</a>
+            <div class="archive" id="archive">
+                <ul>
+                    <li>Previous cracker</li>
+                    <li>Previous cracker</li>
+                    <li>Previous cracker</li>
+                    <li>Previous cracker</li>
+                    <li>Previous cracker</li>
+                </ul>
+            </div>
             <p class="sub">Have a great Christmas from all of us at...</p>
-            <a href="#"><img src="/images/logo.png" alt="cdd logo"></a>
+            <a href="http://cddnation.com"><img src="/images/logo.png" alt="cdd logo"></a>
         </footer>
         
-        <div class="embed" id="vimeo-container"></div>
+        <div class="embed">
+            <div class="embed__inner" id="vimeo-container">
+                <a href="#close" class="embed__close" id="video-close"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></a>
+            </div>
+        </div>
     
         <!--[if lt IE 9]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>

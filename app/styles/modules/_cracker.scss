@@ -80,6 +80,6 @@
 
     // ----- Variation description ----- // 
 
-    &--variation {}
+    [ui-cracker="is-hidden"] & { display: none; }
 
 }

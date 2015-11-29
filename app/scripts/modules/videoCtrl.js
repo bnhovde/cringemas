@@ -37,9 +37,6 @@ var ns = ns || {};
             // Get todays date
             s.date = ns.CONST.DAY;
             
-            // Event listeners
-            DOM.videoPlayBtn.addEventListener('click', _playVideo, false);
-            
             // Setup video embed from google spreadsheet
             _getVideoPath();
         };
@@ -90,28 +87,56 @@ var ns = ns || {};
             // If we're testing (or embed ID is empty), use the demo embed instead
             if (ns.CONST.TEST || vimeoID === '') { vimeoID = 146790300; }
             
-            DOM.vimeoEmbed.innerHTML = '<iframe id="vimeo-embed" src=https://player.vimeo.com/video/' + vimeoID + '?api=1  class="embed__inner" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
-            
+            // Add markup to DOM
+            let markup = '<iframe id="vimeo-embed" src=https://player.vimeo.com/video/' + vimeoID + '?api=1 frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
+            DOM.vimeoEmbed.insertAdjacentHTML('beforeend', markup);
+        
+            // Attach Event listener to newly created close button
+            let closeBtn = document.getElementById('video-close');
+            closeBtn.addEventListener('click', _closeVideo, false);
         };
 
 
         /**
-        * @name showVideo
+        * @name playVideo
         * @desc Shows the video and begins playback
         */   
-        var _playVideo = function () {
-            
-            let iframe = document.getElementById('vimeo-embed');
+        var playVideo = function () {
             
             // Prepare data for Vimeo API
-            var player = $f(iframe);
+            let iframe = document.getElementById('vimeo-embed');
+            let player = $f(iframe);
+            
             player.api('play');
+            
+            // Show video container
+            DOM.body.setAttribute('ui-video', 'is-playing');
+        };
+
+
+        /**
+        * @name closeVideo
+        * @desc Shows the video and begins playback
+        */   
+        var _closeVideo = function () {
+            
+            // Prepare data for Vimeo API
+            let iframe = document.getElementById('vimeo-embed');
+            let player = $f(iframe);
+            
+            player.api('pause');
+            
+            // Hide video container and show archive
+            DOM.body.setAttribute('ui-video', 'is-finished');
+            DOM.body.setAttribute('ui-archive', 'is-visible');
+            DOM.body.setAttribute('ui-cracker', 'is-hidden');
         };
         
         //////////////////
 
         var module = {
-			init: init
+			init: init,
+			playVideo: playVideo
         };
 
         return module;

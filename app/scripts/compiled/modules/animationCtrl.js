@@ -171,7 +171,10 @@ var Velocity = Velocity || {};
             }, {
                 queue: false,
                 duration: 500,
-                easing: [1.7, 1.15]
+                easing: [1.7, 1.15],
+                complete: function complete() {
+                    ns.videoCtrl.playVideo();
+                }
             });
 
             Velocity(DOM.cracker, {

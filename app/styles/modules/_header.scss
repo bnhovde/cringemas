@@ -57,6 +57,15 @@
         margin-bottom: 2rem;
     }
 
+    // ----- Call to action ----- // 
+
+    &__action {
+
+        // Hide after cracker snapped
+        [ui-cracker="is-hidden"] & { display: none; }
+        
+    }
+
 
     // -------------------------------------
     //   Variations

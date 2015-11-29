@@ -182,7 +182,8 @@ var Velocity = Velocity || {};
             }, {
                 queue: false,
                 duration: 500,
-                easing: [1.7, 1.15]
+                easing: [1.7, 1.15],
+                complete: function() { ns.videoCtrl.playVideo(); }
             });
             
 			Velocity(
