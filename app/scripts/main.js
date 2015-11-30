@@ -10,7 +10,7 @@ var ns = ns || {};
 	
 	// Create constants
 	ns.CONST = {
-		DEFAULT : 5 // Default day of the calendar
+		DEFAULT : 1 // Default day of the calendar
 	};
 
 	// Get todays date
