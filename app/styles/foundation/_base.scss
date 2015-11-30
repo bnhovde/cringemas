@@ -112,6 +112,6 @@ p, ul, ol, pre, table, blockquote {
 
 a {
     @include font-family("header");
-    text-decoration: none;
+    text-decoration: underline;
     color: $g-sitecol-red;
 }

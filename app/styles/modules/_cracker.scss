@@ -16,7 +16,7 @@
     // -------------------------------------
 
     position: relative;
-    margin: 5vh auto 10vh auto;
+    margin: 5vh auto;
     width: 547px;
     height: 130px;
     cursor: pointer;
@@ -80,6 +80,6 @@
 
     // ----- Variation description ----- // 
 
-    &--variation {}
+    [ui-cracker="is-hidden"] & { display: none; }
 
 }
