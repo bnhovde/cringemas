@@ -17,9 +17,17 @@
 
     position: relative;
     margin: 5vh auto;
-    width: 547px;
-    height: 130px;
+    width: 300px;
+    height: 80px;
     cursor: pointer;
+    overflow: hidden;
+    
+    @include breakpoint('child-bear'){
+        margin: 5vh auto;
+        width: 547px;
+        height: 130px;
+        overflow: visible;
+    }
     
     // Only show page after fonts have loaded
     visibility: visible; 
@@ -42,10 +50,18 @@
     &__left {
         position: absolute;
         top: 0;
-        left: 0;
-        width: 286px;
-        height: 123px;
+        left: 3px;
+        width: 154px;
+        height: 67px;
         background-image: url('/images/cracker-left.png');
+        background-size: cover;
+        
+        @include breakpoint('child-bear'){
+            top: 0;
+            left: 0;
+            width: 286px;
+            height: 123px;
+        }
     }
 
 
@@ -53,11 +69,19 @@
 
     &__right {
         position: absolute;
-        top: 14px;
-        right: 0;
-        width: 291px;
-        height: 119px;
+        top: 7px;
+        right: 3px;
+        width: 161px;
+        height: 65px;
         background-image: url('/images/cracker-right.png');
+        background-size: cover;
+        
+        @include breakpoint('child-bear'){ 
+            top: 14px;
+            right: 0;
+            width: 291px;
+            height: 119px;
+        }
     }
 
 
@@ -65,9 +89,13 @@
 
     &__date {
         position: absolute;
-        top: 40px;
-        left: 44%;
+        top: 18px;
+        left: 41.7%;
         
+        @include breakpoint('child-bear'){
+            top: 40px;
+            left: 44%;
+        }
     }
 
 

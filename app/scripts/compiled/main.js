@@ -12,7 +12,7 @@ var ns = ns || {};
 
 	// Create constants
 	ns.CONST = {
-		LAST: 31 // Default day of the calendar
+		LAST: 1 // Default day of the calendar
 	};
 
 	// Get todays date

@@ -15,10 +15,15 @@
     //   Base
     // -------------------------------------
 
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     background-color: white;
     transform: rotate(45deg);
+    
+    @include breakpoint('child-bear'){
+        width: 60px;
+        height: 60px;
+    }
 
     // -------------------------------------
     //   Elements
@@ -34,10 +39,15 @@
         right: 0;
         bottom: 0;
         left: 0;
-        font-size: 2rem;
-        line-height: 58px;
+        font-size: 1.5rem;
+        line-height: 41px;
         color: $g-sitecol-red;
         transform: rotate(-45deg);
+        
+        @include breakpoint('child-bear'){
+            font-size: 2rem;
+            line-height: 58px;
+        }
     }
 
 

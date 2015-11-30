@@ -1883,17 +1883,26 @@ h1,
 .h1 {
   font-family: 'museo-sans';
   font-weight: '700';
-  font-size: 47px;
-  font-size: 2.9375rem;
-  line-height: 57px;
-  line-height: 3.5625rem;
-  margin-top: 38px;
-  margin-top: 2.375rem;
-  margin-bottom: 19px;
-  margin-bottom: 1.1875rem;
+  font-size: 28px;
+  font-size: 1.7625rem;
+  line-height: 34px;
+  line-height: 2.1375rem;
+  margin-top: 22px;
+  margin-top: 1.425rem;
+  margin-bottom: 11px;
+  margin-bottom: 0.7125rem;
   text-transform: uppercase;
   color: #D01D3A;
   letter-spacing: 1px;
+}
+@media (min-width: 37.5em) {
+  h1,
+  .h1 {
+    font-size: 2.9375rem;
+    line-height: 3.5625rem;
+    margin-top: 2.375rem;
+    margin-bottom: 1.1875rem;
+  }
 }
 
 h2,
@@ -1901,15 +1910,24 @@ h2,
   font-family: "kepler-std",serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 30px;
-  font-size: 1.9rem;
-  line-height: 30px;
-  line-height: 1.9rem;
-  margin-top: 30px;
-  margin-top: 1.9rem;
-  margin-bottom: 15px;
-  margin-bottom: 0.95rem;
+  font-size: 18px;
+  font-size: 1.14rem;
+  line-height: 18px;
+  line-height: 1.14rem;
+  margin-top: 18px;
+  margin-top: 1.14rem;
+  margin-bottom: 9px;
+  margin-bottom: 0.57rem;
   color: #6D6D6D;
+}
+@media (min-width: 37.5em) {
+  h2,
+  .h2 {
+    font-size: 1.9rem;
+    line-height: 1.9rem;
+    margin-top: 1.9rem;
+    margin-bottom: 0.95rem;
+  }
 }
 
 h3,
@@ -1972,13 +1990,22 @@ a {
 .cracker {
   position: relative;
   margin: 5vh auto;
-  width: 547px;
-  height: 130px;
+  width: 300px;
+  height: 80px;
   cursor: pointer;
+  overflow: hidden;
   visibility: visible;
   opacity: 1;
   transition: opacity .5s ease-in-out;
   transition-delay: .1s;
+}
+@media (min-width: 37.5em) {
+  .cracker {
+    margin: 5vh auto;
+    width: 547px;
+    height: 130px;
+    overflow: visible;
+  }
 }
 .wf-loading .cracker {
   visibility: hidden;
@@ -1987,34 +2014,64 @@ a {
 .cracker__left {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 286px;
-  height: 123px;
+  left: 3px;
+  width: 154px;
+  height: 67px;
   background-image: url("/images/cracker-left.png");
+  background-size: cover;
+}
+@media (min-width: 37.5em) {
+  .cracker__left {
+    top: 0;
+    left: 0;
+    width: 286px;
+    height: 123px;
+  }
 }
 .cracker__right {
   position: absolute;
-  top: 14px;
-  right: 0;
-  width: 291px;
-  height: 119px;
+  top: 7px;
+  right: 3px;
+  width: 161px;
+  height: 65px;
   background-image: url("/images/cracker-right.png");
+  background-size: cover;
+}
+@media (min-width: 37.5em) {
+  .cracker__right {
+    top: 14px;
+    right: 0;
+    width: 291px;
+    height: 119px;
+  }
 }
 .cracker__date {
   position: absolute;
-  top: 40px;
-  left: 44%;
+  top: 18px;
+  left: 41.7%;
+}
+@media (min-width: 37.5em) {
+  .cracker__date {
+    top: 40px;
+    left: 44%;
+  }
 }
 [ui-cracker="is-hidden"] .cracker {
   display: none;
 }
 
 .diamond {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background-color: white;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+@media (min-width: 37.5em) {
+  .diamond {
+    width: 60px;
+    height: 60px;
+  }
 }
 .diamond__inner {
   font-family: 'museo-sans';
@@ -2024,12 +2081,18 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  font-size: 32px;
-  font-size: 2rem;
-  line-height: 58px;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 41px;
   color: #D01D3A;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+@media (min-width: 37.5em) {
+  .diamond__inner {
+    font-size: 2rem;
+    line-height: 58px;
+  }
 }
 
 .embed {
@@ -2107,13 +2170,18 @@ a {
 }
 
 .header {
-  margin: 10vh 0 0 0;
+  margin: 5vh 0 0 0;
   visibility: visible;
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   transition: all 1s cubic-bezier(0, 0, 0.24, 0.85);
   transition-delay: .1s;
+}
+@media (min-width: 37.5em) {
+  .header {
+    margin: 10vh 0 0 0;
+  }
 }
 .wf-loading .header {
   visibility: hidden;
@@ -2122,8 +2190,13 @@ a {
           transform: translate3d(0, 20px, 0);
 }
 .header__title {
-  margin-top: 64px;
-  margin-top: 4rem;
+  margin-top: 32px;
+  margin-top: 2rem;
+}
+@media (min-width: 37.5em) {
+  .header__title {
+    margin-top: 4rem;
+  }
 }
 .header__title > span {
   font-family: "kepler-std",serif;

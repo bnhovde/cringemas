@@ -15,7 +15,8 @@
     //   Variables & Base
     // -------------------------------------
 
-    margin: 10vh 0 0 0;
+    margin: 5vh 0 0 0;
+    @include breakpoint('child-bear'){ margin: 10vh 0 0 0; }
     
     // Only show page after fonts have loaded
     visibility: visible; 
@@ -39,7 +40,8 @@
 
     &__title {
         
-        margin-top: 4rem;
+        margin-top: 2rem;
+        @include breakpoint('child-bear'){ margin-top: 4rem; }
         
         > span {
             @include font-family("kepler");
