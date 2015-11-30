@@ -1,2 +1,2 @@
 # cringemas
-Source code for the (CDD #cringemas website)[http://cringemas.co.uk/]
+Source code for the [CDD #cringemas website](http://cringemas.co.uk/)
