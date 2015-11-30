@@ -12,7 +12,7 @@ var ns = ns || {};
 
 	// Create constants
 	ns.CONST = {
-		LAST: 1 // Default day of the calendar
+		DEFAULT: 5 // Default day of the calendar
 	};
 
 	// Get todays date
@@ -21,9 +21,9 @@ var ns = ns || {};
 	var month = d.getMonth();
 	var dayToDisplay = day;
 
-	// If we're past december, use last day of december
+	// If we're past december, use default day
 	if (month !== 11) {
-		dayToDisplay = ns.CONST.LAST;
+		dayToDisplay = ns.CONST.DEFAULT;
 	} else {
 
 		// We're in December.
@@ -45,5 +45,6 @@ var ns = ns || {};
 
 	// Fire off modules
 	ns.animationCtrl.init();
+	ns.UI.init();
 })(window, document);
 //# sourceMappingURL=main.js.map

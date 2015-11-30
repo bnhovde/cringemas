@@ -1975,13 +1975,25 @@ a {
 .archive {
   display: none;
 }
+.archive__item {
+  display: inline-block;
+}
+.archive__item a {
+  padding: 10px;
+  text-decoration: none;
+}
 [ui-archive="is-visible"] .archive {
   display: block;
 }
 
 .container {
   max-width: 550px;
-  margin: 0 auto;
+  margin: 0 20px;
+}
+@media (min-width: 37.5em) {
+  .container {
+    margin: 0 auto;
+  }
 }
 .container--wide {
   max-width: 1024px;
@@ -2122,8 +2134,13 @@ a {
 .embed__inner {
   position: relative;
   width: 90%;
-  max-height: 60vh;
   padding-bottom: 51.05%;
+}
+@media (min-width: 48em) {
+  .embed__inner {
+    width: 80%;
+    padding-bottom: 45.05%;
+  }
 }
 .embed__inner iframe {
   position: absolute;

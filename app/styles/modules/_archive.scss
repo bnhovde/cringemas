@@ -25,7 +25,14 @@
 
     // ----- Element description ----- // 
 
-    &__element {}
+    &__item {
+        display: inline-block;
+        
+        a { 
+            padding: 10px;       
+            text-decoration: none; 
+        }
+    }
 
 
     // -------------------------------------

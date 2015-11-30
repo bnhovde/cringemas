@@ -125,10 +125,11 @@ var ns = ns || {};
 
             player.api('pause');
 
-            // Hide video container and show archive
+            // Hide video container
             DOM.body.setAttribute('ui-video', 'is-finished');
-            DOM.body.setAttribute('ui-archive', 'is-visible');
-            DOM.body.setAttribute('ui-cracker', 'is-hidden');
+
+            // Show cracker archive
+            ns.UI.showArchive();
         };
 
         //////////////////

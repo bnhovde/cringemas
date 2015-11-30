@@ -20,8 +20,11 @@
 
     
     max-width: $container-narrow;
-    margin: 0 auto;
+    margin: 0 20px;
     
+    @include breakpoint('child-bear'){
+        margin: 0 auto;
+    }
     
     // -------------------------------------
     //   Variations

@@ -20,7 +20,8 @@ var Velocity = Velocity || {};
             crackerLeft: document.getElementById('cracker-left'),
             crackerRight: document.getElementById('cracker-right'),
             diamond: document.getElementById('diamond'),
-            diamondDate: document.getElementById('diamond-date')
+            diamondDate: document.getElementById('diamond-date'),
+            soundClip: document.getElementById('sound')
         };
 
         var settings = {
@@ -157,6 +158,8 @@ var Velocity = Velocity || {};
         var _fireCracker = function _fireCracker() {
 
             settings.crackerFired = true;
+
+            DOM.soundClip.play();
 
             Velocity(DOM.crackerLeft, {
                 translateX: '-300px',

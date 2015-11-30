@@ -31,6 +31,7 @@
     visibility: hidden;
     transition: all .5s cubic-bezier(0, 0, 0.24, 0.85);
     
+    
     // -------------------------------------
     //   Elements
     // -------------------------------------
@@ -41,8 +42,12 @@
     &__inner {
         position: relative;
         width: 90%;
-        max-height: 60vh;
         padding-bottom: 51.05%;
+        
+        @include breakpoint('teen-bear'){
+            width: 80%;
+            padding-bottom: 45.05%;
+        }
         
         iframe {
             position: absolute; 

@@ -34,13 +34,16 @@
             </symbol>
         </svg>
         
+        <!-- Audio preload -->
+        <audio src="snap.wav" id="sound" preload="auto"></audio>
+        
         <header class="header">
             <div class="container">
                 <a href="#">#cringemas</a>
                 <h1 class="header__title"><span>It's a...</span>Cringemas Cracker</h1>
                 <h2 class="header__sub">Preparing the nation with the worst christmas cracker jokes you can expect</h2>
                 <div class="header__action">
-                    <p class="t t--action">Go ahead, click on the cracker...</p>
+                    <p class="t t--action">Cover your ears and click on the cracker...</p>
                 </div>
             </div>
         </header>
@@ -59,19 +62,17 @@
         
         <footer class="footer">
             <ul class="social" id="social-icons">
-                <li class="social__icon"><a href="http://twitter.com/home?status=[TITLE]+[URL]" id="social-twitter"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a></li>
-                <li class="social__icon"><a href="http://www.facebook.com/share.php?u=[URL]&title=[TITLE]" id="social-twitter"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a></li>
+                <li class="social__icon"><a href="http://twitter.com/home?status=Cringemas+http://cringemas.co.uk" id="social-twitter" target="_blank"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a></li>
+                <li class="social__icon"><a href="http://www.facebook.com/share.php?u=http://cringemas.co.uk&title=Cringemas" id="social-facebook" target="_blank"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a></li>
             </ul>
-            <a href="#">Previous Crackers</a>
-            <div class="archive" id="archive">
-                <ul>
-                    <li>Previous cracker</li>
-                    <li>Previous cracker</li>
-                    <li>Previous cracker</li>
-                    <li>Previous cracker</li>
-                    <li>Previous cracker</li>
-                </ul>
-            </div>
+            <a href="#previous" id="previous">Previous Crackers</a>
+            <ul class="archive" id="archive">
+                <li>Previous cracker</li>
+                <li>Previous cracker</li>
+                <li>Previous cracker</li>
+                <li>Previous cracker</li>
+                <li>Previous cracker</li>
+            </ul>
             <p class="sub">Have a great Christmas from all of us at...</p>
             <a href="http://cddnation.com"><img src="/images/logo.png" alt="cdd logo"></a>
         </footer>
@@ -105,6 +106,7 @@
     
         <!-- build:js scripts/main.js -->
         <script src="scripts/compiled/modules/helpers.js"></script>
+        <script src="scripts/compiled/modules/UI.js"></script>
         <script src="scripts/compiled/modules/velocity.min.js"></script>
         <script src="scripts/compiled/modules/videoCtrl.js"></script>
         <script src="scripts/compiled/modules/animationCtrl.js"></script>
