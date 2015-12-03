@@ -12,7 +12,8 @@ var ns = ns || {};
 
 	// Create constants
 	ns.CONST = {
-		DEFAULT: 1 // Default day of the calendar
+		DEFAULT: 1, // Default day of the calendar
+		LAST: 31 // Last day of the calendar
 	};
 
 	// Get todays date
@@ -41,6 +42,7 @@ var ns = ns || {};
 
 	// Set constants
 	ns.CONST.DAY = dayToDisplay;
+	ns.CONST.CURRENTDAY = day;
 	ns.CONST.TEST = ns.helpers.getQueryVariable('test');
 
 	// Fire off modules

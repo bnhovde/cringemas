@@ -85,7 +85,7 @@ var ns = ns || {};
             
             let markup = '';
 
-            for (var index = 1; index <= ns.CONST.DAY; index++) {
+            for (var index = 1; index <= ns.CONST.CURRENTDAY; index++) {
                 markup += '<li class="archive__item"><a href="/?day=' + index + '">Day ' + index + '</a></li>';
             }
             
