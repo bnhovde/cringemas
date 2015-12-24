@@ -12,7 +12,7 @@ var ns = ns || {};
 
 	// Create constants
 	ns.CONST = {
-		DEFAULT: 1, // Default day of the calendar
+		DEFAULT: 24, // Default day of the calendar
 		LAST: 31 // Last day of the calendar
 	};
 
