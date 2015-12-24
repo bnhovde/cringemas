@@ -16,7 +16,8 @@
     // -------------------------------------
 
     display: none;
-
+    max-width: 530px;
+    margin: 20px auto;
 
     // -------------------------------------
     //   Elements
@@ -27,6 +28,8 @@
 
     &__item {
         display: inline-block;
+        width: 80px;
+        margin: 10px 0;
         
         a { 
             padding: 10px;       

@@ -1974,9 +1974,13 @@ a {
 
 .archive {
   display: none;
+  max-width: 530px;
+  margin: 20px auto;
 }
 .archive__item {
   display: inline-block;
+  width: 80px;
+  margin: 10px 0;
 }
 .archive__item a {
   padding: 10px;
